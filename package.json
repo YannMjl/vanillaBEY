@@ -1,0 +1,28 @@
+{
+  "name": "vanillabeyk",
+  "version": "1.0.0",
+  "description": "demo nodejs backend application",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node ./app.js",
+    "build": "echo Build testing, All good!",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirillrakitin/vanillaBEYk.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "babel"
+  ],
+  "author": "Kirill Rakitin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirillrakitin/vanillaBEYk/issues"
+  },
+  "homepage": "https://github.com/kirillrakitin/vanillaBEYk#readme"
+}
