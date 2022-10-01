@@ -36,7 +36,7 @@ const routes = (app) => {
 
     // get list of week days
     app.route('/days')
-        .get(getPeople)
+        .get(getWeekDays)
 }
 
 // export the route
