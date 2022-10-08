@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ---------------------------------------------------------------------------------*
 # This will prevent your local modules and debug logs from being copied onto your 
 # Docker image and possibly overwriting modules installed within your image.
@@ -13,3 +14,24 @@ npm-debug.log
 README-secret.md
 # github related files
 .github/
+=======
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
+# should NOT be excluded as they contain compiler settings and other important
+# information for Eclipse / Flash Builder.
+node_modules
+>>>>>>> 501eb5bececf2242b22cbc56bc4080c6bee5e8a0
