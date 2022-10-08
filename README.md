@@ -1,3 +1,3 @@
 # vanillaBEY
 
-This is a demo project
+This is a Node JS demo project 
