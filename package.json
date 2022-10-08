@@ -1,0 +1,37 @@
+{
+  "name": "vanillabey",
+  "version": "1.0.0",
+  "description": "This is demo node JS backend application",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "start": "babel-node ./app.js",
+    "build": "echo Build testing, All good!",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannMjl/vanillaBEY.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "express",
+    "babel"
+  ],
+  "author": "Yann Mulonda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YannMjl/vanillaBEY/issues"
+  },
+  "homepage": "https://github.com/YannMjl/vanillaBEY#readme",
+  "dependencies": {
+    "@babel/preset-env": "^7.19.3",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.2.5",
+    "babel-preset": "^1.1.7",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.18.1",
+    "jest": "^29.1.2"
+  }
+}
