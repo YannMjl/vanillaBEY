@@ -2,4 +2,4 @@
 
 This is a demo project
 
-s
+more info
