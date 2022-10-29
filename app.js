@@ -10,7 +10,7 @@ const arrNodes = [ process.env.NODE_SVC_PUBLIC_SERVICE_HOST  ];       //  use th
 
 // constant variables 
 const app = express();
-const PORT = process.env.PORT || 30002;
+const PORT = process.env.PORT || 5000;
 const HOST = '0.0.0.0'; //any IP address can access 
 
 // body parser setup for Express v4.16.0 and higher
