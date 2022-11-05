@@ -1,15 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI-CD production
+name: Prod
 
 # Controls when the action will run. 
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -77,14 +74,34 @@ jobs:
             context: ./
             file: ./Dockerfile
             push: true
-            tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanilabey:latest
+            tags: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-demo:latest
           
         - name: Run the image in a container
           uses: addnab/docker-run-action@v3
           with:
-            image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-vanilabey:latest
+            image: ${{ secrets.DOCKERHUB_USERNAME }}/nodejs-demo:latest
             run: |
               echo "runing the docker image"
               echo "Testing the nodejs  app endpoints"
               echo ${{ steps.docker_build.outputs.digest }}
-  
+  # deploy application to heroku            
+  deploy_to_heroku:
+      name: Deploy to Heroku
+      runs-on: ubuntu-latest
+      # only run this after deploying to docker
+      needs: [push_to_Docker_Hub]
+      steps:
+        - name: checkout repo
+          uses: actions/checkout@v2
+        # more info on deploy to heroku: 
+        # https://github.com/marketplace/actions/deploy-to-heroku
+        - name: deploy to Heroku
+          uses: akhileshns/heroku-deploy@v3.12.12
+          with:
+            heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+            heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+            heroku_email: ${{ secrets.HEROKU_EMAIL }}
+            # build the app docker image using the Dockerfile
+            # and run that image in a container that's pushed to heroku
+            usedocker: true
+    
