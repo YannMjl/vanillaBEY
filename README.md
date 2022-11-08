@@ -1,5 +1,3 @@
-# vanillaBEYk
+# vanilla
 
-This is a demo project
-
-more info...
+This is a demo NodeJS project

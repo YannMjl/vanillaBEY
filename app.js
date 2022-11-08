@@ -1,4 +1,3 @@
-
 // import Express and routes
 import express from 'express';
 import routes from './source/routes/route.js';
